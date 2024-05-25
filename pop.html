@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+
+
+  
+  <title>Watch Now</title>
+  <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.5/css/lightslider.min.css'>
+  
+<style>
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url(images/);
+  position: relative;
+  font-family: "Exo", sans-serif;
+  margin: 0;
+  background: #faf7f7cd;
+  color: rgb(255, 255, 255);
+  min-height: 100%;
+}
+
+.full_container {
+  width: 750px;
+  margin: 50px auto;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 69px -3px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0 0 69px -3px rgba(0, 0, 0, 0.48);
+  box-shadow: 0 0 69px -3px rgba(0, 0, 0, 0.48);
+  transform: translateY(30%);
+  transition: all 0.5s ease;
+}
+.full_container .top_bar {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 35%, rgba(219, 23, 61, 0.3) 100%), url(http://cdn2us.denofgeek.com/sites/denofgeekus/files/2016/05/mr-robot.jpg) no-repeat #000;
+  background-size: contain;
+  background-position: 100%;
+}
+.full_container .top_bar .bar_content {
+  width: 90%;
+  height: inherit;
+  font-family: "Exo", sans-serif;
+  margin: auto;
+}
+.full_container .top_bar .title {
+  float: right;
+  font-weight: bold;
+}
+.full_container .top_bar .track {
+  position: relative;
+  top: 30%;
+  margin-left: 30px;
+}
+.full_container .top_bar .track .description {
+  width: 280px;
+  line-height: 20px;
+}
+.full_container .top_bar .track .btns {
+  display: flex;
+}
+.full_container .top_bar .track .btn {
+  border-radius: 50px;
+  border: none;
+  color: #c52d3f;
+  background: #fff;
+  font-family: "Exo", sans-serif;
+  font-weight: bold !important;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.full_container .top_bar .track #add-btn {
+  padding: 5px 15px;
+  margin-left: 15px;
+  font-size: 25px;
+}
+.full_container .top_bar .track .lrg-btn {
+  padding: 10px 30px;
+}
+.full_container .top_bar:after {
+  content: "";
+  height: 500px;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, #000000, #151414);
+  opacity: 0.4;
+}
+.full_container .bottom_bar {
+  max-height: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.full_container .bottom_bar .bottom-content {
+  width: 100%;
+  color: #000;
+  margin: auto;
+  visibility: hidden;
+  animation: collapsee 0.5s forwards;
+  transition: all 0.5s;
+}
+.full_container .bottom_bar .bottom-content .sec_title {
+  padding-top: 15px;
+  text-indent: 50px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.full_container .bottom_bar .bottom-content .section {
+  margin: 20px 0 20px 0;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.full_container .bottom_bar .bottom-content .section .lSSlideWrapper .content-slider {
+  height: auto !important;
+}
+.full_container .bottom_bar .bottom-content .section .lSSlideWrapper .content-slider a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer !important;
+}
+.full_container .bottom_bar .bottom-content .section .lSSlideWrapper .content-slider a .slide-content img {
+  width: 160px;
+  height: 96px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  transition: 0.4s all;
+}
+.full_container .bottom_bar .bottom-content .section .lSSlideWrapper .content-slider a .titles {
+  text-align: left;
+  padding-left: 60px;
+  width: 160px;
+}
+.full_container .bottom_bar .bottom-content .section .lSSlideWrapper .content-slider a .ep_title, .full_container .bottom_bar .bottom-content .section .lSSlideWrapper .content-slider a h6 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  word-break: break-word;
+  font-family: monospace;
+}
+.full_container .bottom_bar .bottom-content .section .lSSlideWrapper .content-slider a:hover img {
+  border: 2px solid black;
+}
+.full_container .bottom_bar .bottom-content .section .lSSlideWrapper .content-slider a:hover h3 {
+  color: #000;
+}
+.full_container .bottom_bar .bottom-content .section .lSSlideWrapper .lSAction {
+  position: relative;
+  top: -110px;
+}
+.full_container .bottom_bar .bottom-content .section .lSSlideWrapper .lSPrev, .full_container .bottom_bar .bottom-content .section .lSSlideWrapper .lSNext {
+  background-image: none;
+}
+.full_container .bottom_bar .bottom-content .section .lSSlideWrapper .lslide:nth-child(1),
+.full_container .bottom_bar .bottom-content .section .lSSlideWrapper .lslide:nth-child(2),
+.full_container .bottom_bar .bottom-content .section .lSSlideWrapper .lslide:nth-child(3) {
+  opacity: 0 !important;
+  margin-top: -50px !important;
+}
+
+/* * Classes * */
+/* border-radius */
+.full-radius {
+  border-radius: 15px;
+}
+
+.top-radius {
+  border-radius: 15px 15px 0 0;
+}
+
+/*
+* associate animation to elements
+*/
+.fade-down-slides {
+  animation: fade-down-slides 0.5s forwards;
+}
+
+.shdw:hover {
+  -webkit-box-shadow: 0 0 17px 0 #fff7ff;
+  -moz-box-shadow: 0 0 17px 0 #fff7ff;
+  box-shadow: 0 0 17px 0 #fff7ff;
+  transition: all 0.4s;
+}
+
+@keyframes collapsee {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: initial;
+  }
+}
+@keyframes fade-down-slides {
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="full_container">
+  <div class="top_bar full-radius">
+    <div class="bar_content">
+      <h2 class="title">Wednesday</h2>
+      <div class="track">Season 1, Episodes 8
+        <h2>Comedy Horror</h2>
+        <h6 class="description">
+          <Lorem>While attending Nevermore Academy, Wednesday Addams attempts to master her emerging psychic ability, thwart a killing spree and solve the mystery that embroiled her parents 25 years ago.</Lorem>
+        </h6>
+        <div class="btns">
+        <div> <a href="http://127.0.0.1:5500/video.html" <button class="btn lrg-btn shdw" id="wtch_btn">Watch Now</button></a> </div>  
+          <button class="btn shdw" id="add-btn">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom_bar">
+    <div class="bottom-content">
+      <div class="sec_title">Episodes</div>
+      <div class="section">
+        <div class="content-slider" id="content-slider"><a class="content" href="#"> 
+            <div class="slide-content"><img src="#{images[x]}"/></div>
+            <div class="titles">
+              <h3 class="ep_title">eps1.0_hellofriend</h3>
+              <h6>SE01</h6>
+            </div></a><a class="content" href="#"> 
+            <div class="slide-content"><img src="#{images[x]}"/></div>
+            <div class="titles">
+              <h3 class="ep_title">eps1.1_ones-and-zer0es</h3>
+              <h6>SE01</h6>
+            </div></a><a class="content" href="#"> 
+            <div class="slide-content"><img src="#{images[x]}"/></div>
+            <div class="titles">
+              <h3 class="ep_title">eps1.2_d3bug</h3>
+              <h6>SE01</h6>
+            </div></a><a class="content" href="#"> 
+            <div class="slide-content"><img src="#{images[x]}"/></div>
+            <div class="titles">
+              <h3 class="ep_title">eps1.3_da3m0ns</h3>
+              <h6>SE01</h6>
+            </div></a><a class="content" href="#"> 
+            <div class="slide-content"><img src="#{images[x]}"/></div>
+            <div class="titles">
+              <h3 class="ep_title">eps1.4_3xpl0its</h3>
+              <h6>SE01</h6>
+            </div></a><a class="content" href="#"> 
+            <div class="slide-content"><img src="#{images[x]}"/></div>
+            <div class="titles">
+              <h3 class="ep_title">eps1.5_br4ve-trave1er</h3>
+              <h6>SE01</h6>
+            </div></a><a class="content" href="#"> 
+            <div class="slide-content"><img src="#{images[x]}"/></div>
+            <div class="titles">
+              <h3 class="ep_title">eps1.6_v1ew-s0urce</h3>
+              <h6>SE01</h6>
+            </div></a><a class="content" href="#"> 
+            <div class="slide-content"><img src="#{images[x]}"/></div>
+            <div class="titles">
+              <h3 class="ep_title">eps1.7_wh1ter0se</h3>
+              <h6>SE01</h6>
+            </div></a><a class="content" href="#"> 
+            <div class="slide-content"><img src="#{images[x]}"/></div>
+            <div class="titles">
+              <h3 class="ep_title">eps1.8_m1rr0r1ng</h3>
+              <h6>SE01</h6>
+            </div></a><a class="content" href="#"> 
+            <div class="slide-content"><img src="#{images[x]}"/></div>
+            <div class="titles">
+              <h3 class="ep_title">eps1.9_zer0-day</h3>
+              <h6>SE01</h6>
+            </div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.5/js/lightslider.min.js'></script>
+      <script id="rendered-js" >
+var pager = true;
+//Calm down just 2 svg icons :D
+var prev = '<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve"><g><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225 c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/></g></svg>';
+var next = '<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve"><g><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5 c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"/></g></svg>';
+
+$("#content-slider").lightSlider({
+  loop: false,
+  item: 3,
+  keyPress: true,
+  slideMargin: -55,
+  pager: false,
+  prevHtml: prev,
+  nextHtml: next });
+
+//adds classes to hidden divs
+
+//animation fires on click "Watch Now" button
+$('#wtch_btn').on('click', function () {
+  var full_con = $('.full_container');
+  full_con.css('transform', 'translateY(0)');
+
+  $('.full_container .top_bar').removeClass('full-radius').addClass('top-radius');
+
+  setTimeout(function () {
+    $('.bottom_bar').css('max-height', '1000px');
+
+    setTimeout(function () {
+      $('.bottom-content').css('visibility', 'visible');
+      //$('.lSPrev').addClass('fade-down-arws');
+      setTimeout(function () {$('.lslide.active').addClass('fade-down-slides');}, 300);
+      setTimeout(function () {$('.lslide.active').next().addClass('fade-down-slides');}, 400);
+      setTimeout(function () {$('.lslide.active').next().next().addClass('fade-down-slides');}, 500);
+      //setTimeout(function(){$('.lSNext').addClass('fade-down-arws');}, 600);
+
+    }, 300);
+
+  }, 500);
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
